@@ -54,5 +54,5 @@ Each field of user type can be not only single instance, but list of them:
 [Node-based generator](https://github.com/Leopotam/simplebinary-gen-node.git)
 
 ## Support code
-[Typescript](https://github.com/Leopotam/simplebinary-ts.git)
-[Typescript](https://github.com/Leopotam/simplebinary-cs.git)
+* [Typescript](https://github.com/Leopotam/simplebinary-ts.git)
+* [C#](https://github.com/Leopotam/simplebinary-cs.git)
