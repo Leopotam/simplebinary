@@ -49,6 +49,13 @@ Each field of user type can be not only single instance, but list of them:
     }
 }
 ```
+# Features / Limits
+* Amount of user types limited to 64k.
+* Amount of items in field of "array" type limited to 64k.
+* No optional fields.
+* All fields of "string" type inited with empty string by default.
+* All fields of any number type inited with zero value by default.
+
 
 # Code generation
 [Node-based generator](https://github.com/Leopotam/simplebinary-gen-node.git)
