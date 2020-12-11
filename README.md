@@ -13,12 +13,19 @@ This format - attempt to create simplest binary serialization with:
 Scheme - standard json and can be parsed without special lexer/parser:
 ```json
 {
+    // Point in 3d space. Yes, single line comments are supported inside config.
     "Point": {
         "x": "f32",
         "y": "f32",
         "z": "f32",
     },
     "Attack": {
+        /*
+        Id of attacker unit.
+        Yes, multiple line
+        comments are supported
+        inside config too.
+        */
         "attackerId": "i32",
         "target": "Point",
         "damage": "f32"
