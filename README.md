@@ -56,6 +56,26 @@ Each field of user type can be not only single instance, but list of them:
     }
 }
 ```
+Scheme can be extended by "including" other schemes (with recursive support, but without circular loop checking, use with care):
+```jsonc
+{
+    /*
+    "#include" node name hardcoded, all content
+    will be included at start of final scheme.
+    */
+    "#include": [
+        // each line of array is filename of external scheme file.
+        "./common.json"
+    ],
+    "Item": {
+        "id": "u32",
+        "count": "u32"
+    },
+    "Inventory": {
+        "items": "Item[]"
+    }
+}
+```
 # Features / Limits
 * Amount of user types limited to 64k.
 * Amount of items in field of "array" type limited to 64k.
