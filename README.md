@@ -11,7 +11,7 @@ This format - attempt to create simplest binary serialization with:
 
 # Data scheme description
 Scheme - standard json and can be parsed without special lexer/parser:
-```json
+```jsonc
 {
     // Point in 3d space. Yes, single line comments are supported inside config.
     "Point": {
@@ -45,7 +45,7 @@ Each field of user type can be one of simple types:
 * "s16" - utf8 string with capacity up to 64k bytes (not utf8 symbols!).
 Any user type can be used as field too ("Point" type in example above).
 Each field of user type can be not only single instance, but list of them:
-```json
+```jsonc
 {
     "Item": {
         "id": "u32",
