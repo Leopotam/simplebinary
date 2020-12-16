@@ -33,17 +33,20 @@ Scheme - standard json and can be parsed without special lexer/parser:
 }
 ```
 Each scheme record - separate user type (packet) with nested fields / properties.
+
 Each field of user type can be one of simple types:
 * "i8" - signed 8bit number (1 byte).
 * "u8" - unsigned 8bit number (1 byte).
-* "i16" - signed 16bit number (2 byte).
-* "u16" - unsigned 16bit number (2 byte).
-* "i32" - signed 32bit number (4 byte).
-* "u32" - unsigned 8bit number (4 byte).
-* "f32" - single float-point number (4 byte).
-* "f64" - double float-point number (8 byte).
-* "s16" - utf8 string with capacity up to 64k bytes (not utf8 symbols!).
+* "i16" - signed 16bit number (2 bytes).
+* "u16" - unsigned 16bit number (2 bytes).
+* "i32" - signed 32bit number (4 bytes).
+* "u32" - unsigned 8bit number (4 bytes).
+* "f32" - single float-point number (4 bytes).
+* "f64" - double float-point number (8 bytes).
+* "s16" - utf8 string with capacity up to 64k bytes. Important - data length in bytes, not in chars, real possible string length will be smaller on non-latin symbols!
+
 Any user type can be used as field too ("Point" type in example above).
+
 Each field of user type can be not only single instance, but list of them:
 ```jsonc
 {
