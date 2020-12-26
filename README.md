@@ -79,6 +79,31 @@ Scheme can be extended by "including" other schemes (with recursive support, but
     }
 }
 ```
+
+Types can be extended by "common" fields that will be included to all type schemas:
+```jsonc
+{
+    /*
+    "#common" node name hardcoded, all content
+    will be included at start of each user type.
+    */
+    "#common": {
+        "id":"u16",
+        "name":"s16"
+    },
+    "Item": {
+        /*
+        invalid schema - field with name "id"
+        already exists (injected by "#common").
+        */
+        "id": "u32",
+        "count": "u32"
+    },
+    "Inventory": {
+        "items": "Item[]"
+    }
+}
+```
 # Features / Limits
 * Amount of user types limited to 64k.
 * Amount of items in field of "array" type limited to 64k.
