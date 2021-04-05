@@ -59,6 +59,23 @@ Each field of user type can be not only single instance, but list of them:
     }
 }
 ```
+
+Enums can be described in scheme too:
+```jsonc
+    // enum description - with "/enum" suffix.
+    "ClientType/enum": [
+        "iOS",
+        "Android"
+    ],
+    "Client": {
+        // enum usage as field - type should contains full name with suffix.
+        "type": "ClientType/enum",
+        "name": "s16",
+        "pass": "s16"
+    }
+```
+> Only enums with less than 256 items are supported (will be packed as `u8` field).
+
 Scheme can be extended by "including" other schemes (with recursive support, but without circular loop checking, use with care):
 ```jsonc
 {
